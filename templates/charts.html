@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 class="mb-4">Rainfall Trends & Patterns</h2>
+
+<div class="row">
+
+    <div class="col-md-6 mb-4">
+        <div class="card shadow p-3">
+            <h5>Rainfall Distribution</h5>
+            <img src="{{ url_for('static', filename='graphs/rainfall_distribution.png') }}" class="img-fluid">
+        </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+        <div class="card shadow p-3">
+            <h5>Correlation Heatmap</h5>
+            <img src="{{ url_for('static', filename='graphs/correlation_heatmap.png') }}" class="img-fluid">
+        </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+        <div class="card shadow p-3">
+            <h5>Feature Importance</h5>
+            <img src="{{ url_for('static', filename='graphs/feature_importance.png') }}" class="img-fluid">
+        </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+        <div class="card shadow p-3">
+            <h5>Classification Confusion Matrix</h5>
+            <img src="{{ url_for('static', filename='graphs/confusion_matrix.png') }}" class="img-fluid">
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
